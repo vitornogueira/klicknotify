@@ -1,0 +1,50 @@
+{
+  "name": "klicknotify",
+  "version": "1.0.0",
+  "description": "klicknotify",
+  "main": "dist/klicknotify.js",
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src/main.js --presets es2015 --plugins transform-es2015-modules-umd -o dist/klicknotify.js && uglifyjs dist/klicknotify.js -o dist/klicknotify.min.js",
+    "test": "karma start",
+    "lint": "eslint test/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/klicksite/klicknotify.git"
+  },
+  "keywords": [
+    "notify"
+  ],
+  "author": "Vitor Nogueira <vnweb.contato@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/klicksite/klicknotify#readme",
+  "dependencies": {
+    "metapod": "1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "chai": "3.5.0",
+    "chai-spies": "^0.7.1",
+    "eslint": "3.10.2",
+    "eslint-config-airbnb": "13.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "karma": "^1.3.0",
+    "karma-browserify": "^5.1.0",
+    "karma-es6-shim": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "mocha": "^3.1.2",
+    "phantomjs-polyfill": "^0.0.2",
+    "phantomjs-prebuilt": "^2.1.13",
+    "uglify-js": "^2.7.4",
+    "watchify": "^3.7.0"
+  }
+}

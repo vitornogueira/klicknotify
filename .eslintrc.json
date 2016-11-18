@@ -1,0 +1,10 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "airbnb",
+  "installedESLint": true,
+  "plugins": [
+    "react"
+  ]
+}
