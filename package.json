@@ -5,7 +5,11 @@
   "main": "dist/klicknotify.js",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
-    "build": "babel src/main.js --presets es2015 --plugins transform-es2015-modules-umd -o dist/klicknotify.js && uglifyjs dist/klicknotify.js -o dist/klicknotify.min.js",
+    "js-transpile": "browserify src/js/klicknotify.js -o dist/klicknotify.js -t [ babelify --presets [ es2015 ] --plugins [ add-module-exports ] ] --standalone Klicknotify",
+    "js-minify": "uglifyjs dist/klicknotify.js -o dist/klicknotify.min.js",
+    "build-style": "node-sass src/scss/main.scss dist/klicknotify.css --output-style compressed",
+    "build-js": "npm run js-transpile && npm run js-minify",
+    "build": "npm run build-js && npm run build-style",
     "test": "karma start",
     "lint": "eslint test/ src/"
   },
@@ -24,6 +28,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-es2015-modules-umd": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
@@ -42,6 +47,7 @@
     "karma-mocha-reporter": "^2.2.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "mocha": "^3.1.2",
+    "node-sass": "^3.13.0",
     "phantomjs-polyfill": "^0.0.2",
     "phantomjs-prebuilt": "^2.1.13",
     "uglify-js": "^2.7.4",

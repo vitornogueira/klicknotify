@@ -5,7 +5,7 @@ export default () => tag.div(
   tag.div(
     tag.span({ className: StyleConfig.MESSAGE_CLASS }),
     tag.a(
-      tag.i({ className: StyleConfig.CLOSE_ICON_CLASS }),
+      'x',
       {
         href: '#',
         className: StyleConfig.CLOSE_CLASS,

@@ -14,10 +14,10 @@ module.exports = (config) => {
       'es6-shim',
     ],
 
-    files: ['src/**/*.js', 'test/**/*.js'],
+    files: ['src/js/**/*.js', 'test/**/*.js'],
 
     preprocessors: {
-      'src/**/*.js': ['browserify'],
+      'src/js/**/*.js': ['browserify'],
       'test/**/*.spec.js': ['browserify'],
     },
 
