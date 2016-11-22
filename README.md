@@ -1,5 +1,8 @@
 # Klicknotify
 
+[![Build Status](https://travis-ci.org/ignicaodigitalbr/klicknotify.svg?branch=master)](https://travis-ci.org/ignicaodigitalbr/klicknotify)
+[![npm](https://img.shields.io/npm/v/klicknotify.svg)](https://github.com/ignicaodigitalbr/klicknotify)
+
 > Simple notification plugin for Klick* projects
 
 ## Install
