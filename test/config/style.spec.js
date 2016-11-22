@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as Config from '../../src/config/style';
+import * as Config from '../../src/js/config/style';
 
 describe('notify config app', () => {
   it('has a valid config', () => {
@@ -16,10 +16,6 @@ describe('notify config app', () => {
 
   it('has a valid close class', () => {
     expect(Config.CLOSE_CLASS).to.be.a('String');
-  });
-
-  it('has a valid close icon class', () => {
-    expect(Config.CLOSE_ICON_CLASS).to.be.a('String');
   });
 
   it('has a valid is visible class', () => {

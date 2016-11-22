@@ -1,7 +1,7 @@
 import chai from 'chai';
 import spies from 'chai-spies';
-import Notify from '../src/main';
-import NotifyView from '../src/views/main';
+import Notify from '../src/js/klicknotify';
+import NotifyView from '../src/js/views/main';
 
 const expect = chai.expect;
 

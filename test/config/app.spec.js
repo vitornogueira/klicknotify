@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as Config from '../../src/config/app';
+import * as Config from '../../src/js/config/app';
 
 describe('notify config app', () => {
   it('has a valid config', () => {
