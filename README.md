@@ -34,9 +34,9 @@ Notify.show({ type: 'success', message: 'Ok!' });
 You can use the types as alias to show notification:
 
 ```javascript
-Notification.success({ message: 'ok' });
+Notify.success({ message: 'ok' });
 
-Notification.error({ message: 'error' });
+Notify.error({ message: 'error' });
 
-Notification.warning({ message: 'caution' });
+Notify.warning({ message: 'caution' });
 ```
