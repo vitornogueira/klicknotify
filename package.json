@@ -1,8 +1,8 @@
 {
   "name": "klicknotify",
   "version": "1.0.0",
-  "description": "klicknotify",
-  "main": "dist/klicknotify.js",
+  "description": "Notification plugin for Klick* projects",
+  "main": "lib/klicknotify.js",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
     "js-transpile": "browserify src/js/klicknotify.js -o dist/klicknotify.js -t [ babelify --presets [ es2015 ] --plugins [ add-module-exports ] ] --standalone Klicknotify",
@@ -10,19 +10,27 @@
     "build-style": "node-sass src/scss/main.scss dist/klicknotify.css --output-style compressed",
     "build-js": "npm run js-transpile && npm run js-minify",
     "build": "npm run build-js && npm run build-style",
-    "test": "karma start",
-    "lint": "eslint test/ src/"
+    "unit": "karma start",
+    "lint": "eslint test/ src/",
+    "test": "npm run lint && npm run unit",
+    "prepublish": "babel src/js --out-dir lib"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/klicksite/klicknotify.git"
+    "url": "git+https://github.com/ignicaodigitalbr/klicknotify.git"
   },
   "keywords": [
     "notify"
   ],
   "author": "Vitor Nogueira <vnweb.contato@gmail.com>",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/klicksite/klicknotify#readme",
+  "bugs": {
+    "url": "https://github.com/ignicaodigitalbr/klicknotify/issues"
+  },
+  "homepage": "https://github.com/ignicaodigitalbr/klicknotify#readme",
+  "directories": {
+    "test": "test"
+  },
   "dependencies": {
     "metapod": "1.0.0-beta.3"
   },
