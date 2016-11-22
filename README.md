@@ -9,13 +9,13 @@
 
 Get it on npm:
 
-```
+```shell
 npm install klicknotify --save
 ```
 
 ## Usage
 
-```
+```javascript
 import Notify from 'klicknotify';
 
 // Initialize plugin
@@ -33,7 +33,7 @@ Notify.show({ type: 'success', message: 'Ok!' });
 
 You can use the types as alias to show notification:
 
-```
+```javascript
 Notification.success({ message: 'ok' });
 
 Notification.error({ message: 'error' });
