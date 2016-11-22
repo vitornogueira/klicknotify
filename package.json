@@ -1,7 +1,7 @@
 {
   "name": "klicknotify",
   "version": "1.0.0",
-  "description": "Notification plugin for Klick* projects",
+  "description": "Simple notification plugin for Klick* projects",
   "main": "lib/klicknotify.js",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
